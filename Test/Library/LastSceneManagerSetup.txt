@@ -1,0 +1,4 @@
+sceneSetups:
+- path: F:/dream/BaseScene/Assets/Scenes/SampleScene.unity
+  isLoaded: 1
+  isActive: 1

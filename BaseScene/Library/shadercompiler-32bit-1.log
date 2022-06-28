@@ -1,0 +1,8 @@
+Base path: F:/unity5.0/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-32bit-1-9656
+Cmd: getPlatforms
+Cmd: preprocess
+  insize=1632 outsize=696 ok=1
+Cmd: compileSnippet
+  error: 2 plat 4 at (35): undeclared identifier 'UnityObjectToClipPos'\nCompiling Vertex program
+  api=4 type=0 insize=1238 outsize=0 kw= ok=0

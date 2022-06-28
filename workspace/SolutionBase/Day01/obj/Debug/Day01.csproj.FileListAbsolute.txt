@@ -1,0 +1,6 @@
+F:\dream\workspace\SolutionBase\Day01\bin\Debug\Day01.exe.config
+F:\dream\workspace\SolutionBase\Day01\bin\Debug\Day01.exe
+F:\dream\workspace\SolutionBase\Day01\bin\Debug\Day01.pdb
+F:\dream\workspace\SolutionBase\Day01\obj\Debug\Day01.csprojResolveAssemblyReference.cache
+F:\dream\workspace\SolutionBase\Day01\obj\Debug\Day01.exe
+F:\dream\workspace\SolutionBase\Day01\obj\Debug\Day01.pdb
