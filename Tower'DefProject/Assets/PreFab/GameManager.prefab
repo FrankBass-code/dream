@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1320907589623010}
+  m_IsPrefabParent: 1
+--- !u!1 &1320907589623010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4756135681578866}
+  - component: {fileID: 114051537380159152}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4756135681578866
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320907589623010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 21.278053, y: 0.3576984, z: 52.1703}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114051537380159152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320907589623010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7415986c7f49f9b418956bc8cd3bdded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waves:
+  - enemyFab: {fileID: 1748417878264880, guid: cc07e17f9fac6244c90d16c5fc2d1203, type: 2}
+    count: 1
+    rate: 0
+  - enemyFab: {fileID: 1748417878264880, guid: eb10daa1ea7ee724baa3446316bd138e, type: 2}
+    count: 3
+    rate: 0.6
+  - enemyFab: {fileID: 1748417878264880, guid: b2f54999ebb639b49838fa05eac8ad6f, type: 2}
+    count: 5
+    rate: 0.3
+  - enemyFab: {fileID: 1748417878264880, guid: a68613a55605504419031003093c3646, type: 2}
+    count: 7
+    rate: 0.12
+  waveRate: 0.3
+  START: {fileID: 0}

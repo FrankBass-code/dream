@@ -21,11 +21,30 @@ public class Enemy : MonoBehaviour {
 
     private void Move()
     {
-        if (index< positions.Length) {
+        if (index < positions.Length)
+        {
             transform.Translate((positions[index].position - transform.position).normalized * Time.deltaTime * speed);
-            if (Vector3.Distance(positions[index].position, transform.position) < 0.2f) {
+            if (Vector3.Distance(positions[index].position, transform.position) < 0.2f)
+            {
                 index++;
             }
         }
+        else {
+            ReachDestination();
+        }
+    }
+
+    void ReachDestination()
+    {
+
+        GameObject.Destroy(this.gameObject);
+        EnemySpawner.countEnemyAlive--;
+
+    }
+
+    void OnDestory()
+    {
+        EnemySpawner.countEnemyAlive--;
+
     }
 }
