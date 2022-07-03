@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4007021123906632}
   - component: {fileID: 33593147755628430}
   - component: {fileID: 23306196905322312}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4542578719389596}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Missile Launcher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4905913483353748}
   - component: {fileID: 33352732913939568}
   - component: {fileID: 23484672369271318}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -116,7 +116,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 9da90b6de2de89049807dd76e9892ca5, type: 2}
+  - {fileID: 2100000, guid: 2fc3f5ed8d531a14bad565e3e40c7131, type: 2}
   - {fileID: 2100000, guid: 9da90b6de2de89049807dd76e9892ca5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0

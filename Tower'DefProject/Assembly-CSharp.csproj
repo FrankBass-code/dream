@@ -60,8 +60,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\BuildManager.cs" />
+    <Compile Include="Assets\Script\Bullet.cs" />
     <Compile Include="Assets\Script\Enemy.cs" />
     <Compile Include="Assets\Script\EnemySpawner.cs" />
+    <Compile Include="Assets\Script\MapCube.cs" />
+    <Compile Include="Assets\Script\Turrent.cs" />
     <Compile Include="Assets\Script\TurretData.cs" />
     <Compile Include="Assets\Script\ViewController.cs" />
     <Compile Include="Assets\Script\Wave.cs" />

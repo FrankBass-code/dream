@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4022790741321478}
   - component: {fileID: 33337518991318738}
   - component: {fileID: 23554493907420816}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Turret
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4848497692620888}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Laser Beamer Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ GameObject:
   - component: {fileID: 4225478889955616}
   - component: {fileID: 33282259112609820}
   - component: {fileID: 23720396142494316}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Stand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

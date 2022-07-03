@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 23106735469652284}
   - component: {fileID: 135278538751813156}
   - component: {fileID: 114092923532401990}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,6 +97,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 25
+  HP: 150
+  explosionFab: {fileID: 1781451441608384, guid: 0448201d81709b34ea5c33d6512f52fb,
+    type: 2}
 --- !u!135 &135278538751813156
 SphereCollider:
   m_ObjectHideFlags: 1
