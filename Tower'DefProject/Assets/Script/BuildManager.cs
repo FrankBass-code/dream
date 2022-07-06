@@ -14,6 +14,11 @@ public class BuildManager : MonoBehaviour {
     public Text moneyText;
     public Animator moneyAnimator;
 
+    public GameObject upgradeCanvas;
+    public Button upgradeButton;
+
+
+
     public int money = 1000;
 
     // Use this for initialization
@@ -83,5 +88,29 @@ public class BuildManager : MonoBehaviour {
 
 
         }
+    }
+
+
+    void ShowUpgradeUI(Vector3 pos,bool isDisableUpgrade = false) {
+        upgradeCanvas.SetActive(true);
+        upgradeCanvas.transform.position = pos;
+        upgradeButton.interactable = !isDisableUpgrade;
+    }
+
+
+    void HideUpgradeUI()
+    {
+        upgradeCanvas.SetActive(false);
+        
+    }
+
+
+    public void OnUpgradeDown() {
+
+    }
+
+    public void OnDestoryDown()
+    {
+
     }
 }
