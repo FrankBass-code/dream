@@ -16,15 +16,18 @@ public class BuildManager : MonoBehaviour {
 
     public GameObject upgradeCanvas;
     public Button upgradeButton;
+    public MapCube selectedMapCube;
+    private MapCube mapCubeTemp;
 
-
+    private Animator upgradeCavasAnimator;
 
     public int money = 1000;
 
     // Use this for initialization
     void Start () {
-		
-	}
+        upgradeCavasAnimator = upgradeCanvas.GetComponent<Animator>();
+
+    }
 
     void ChangeMoney(int change = 0) {
         money += change;
@@ -45,7 +48,7 @@ public class BuildManager : MonoBehaviour {
                         if (money >= selectedTurretData.cost)
                         {
                             money -= selectedTurretData.cost;
-                            mapCube.BuildTurret(selectedTurretData.turretFab);
+                            mapCube.BuildTurret(selectedTurretData);
                             ChangeMoney(-selectedTurretData.cost);
                         }
                         else {
@@ -54,6 +57,17 @@ public class BuildManager : MonoBehaviour {
                     }
                     else if(mapCube.turretGo != null)
                     {
+                       
+
+                        if (mapCube == selectedMapCube && upgradeCanvas.activeInHierarchy)
+                        {
+                            StartCoroutine( HideUpgradeUI());
+
+                        }
+                        else {
+                            ShowUpgradeUI(mapCube.transform.position, mapCube.isUpgrade);
+                        }
+                        selectedMapCube = mapCube;
 
                     }   
                 }
@@ -92,25 +106,32 @@ public class BuildManager : MonoBehaviour {
 
 
     void ShowUpgradeUI(Vector3 pos,bool isDisableUpgrade = false) {
+        StopCoroutine("HideUpgradeUI"); 
+        upgradeCanvas.SetActive(false);
         upgradeCanvas.SetActive(true);
-        upgradeCanvas.transform.position = pos;
+        upgradeCanvas.transform.position = new Vector3(pos.x, pos.y + 3.5f, pos.z);
         upgradeButton.interactable = !isDisableUpgrade;
     }
 
 
-    void HideUpgradeUI()
+    IEnumerator HideUpgradeUI()
     {
+
+        upgradeCavasAnimator.SetTrigger("Hide");
+        yield return new WaitForSeconds(0.8f);
         upgradeCanvas.SetActive(false);
         
     }
 
 
     public void OnUpgradeDown() {
-
+        selectedMapCube.UpgradeTurret();
+        StartCoroutine(HideUpgradeUI());
     }
 
     public void OnDestoryDown()
     {
-
+        selectedMapCube.DestoryTurret();
+        StartCoroutine(HideUpgradeUI());
     }
 }

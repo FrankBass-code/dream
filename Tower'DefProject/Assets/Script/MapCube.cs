@@ -10,12 +10,18 @@ public class MapCube : MonoBehaviour {
 
     public GameObject buildObj;
 
+    public bool isUpgrade = false;
+
     private Renderer renderer ;
 
-    public void BuildTurret(GameObject turretFab) {
-        turretGo = GameObject.Instantiate(turretFab, transform.position, Quaternion.identity);
+    private Turret turretData;
+
+    public void BuildTurret(Turret turretFab) {
+        this.turretData = turretFab;
+        turretGo = GameObject.Instantiate(turretFab.turretFab, new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z), Quaternion.identity);
+        this.isUpgrade = false;
         GameObject effect = GameObject.Instantiate(buildObj, transform.position, Quaternion.identity);
-        Destroy(effect, 1);
+        Destroy(effect, 1.5f);
     }
     
 	// Use this for initialization
@@ -29,7 +35,28 @@ public class MapCube : MonoBehaviour {
 		
 	}
 
-     void OnMouseEnter()
+
+    public void UpgradeTurret() {
+        if (isUpgrade == true) { return; }
+        Destroy(turretGo);
+        turretGo = GameObject.Instantiate(turretData.turretUpgradedFab, new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z), Quaternion.identity);
+        this.isUpgrade = true;
+        GameObject effect = GameObject.Instantiate(buildObj, transform.position, Quaternion.identity);
+        Destroy(effect, 1.5f);
+
+    }
+
+    public void DestoryTurret()
+    {
+        Destroy(turretGo);
+        this.isUpgrade = false;
+        turretData = null; ;
+        turretGo = null;
+        GameObject effect = GameObject.Instantiate(buildObj, transform.position, Quaternion.identity);
+        Destroy(effect, 1.5f);
+    }
+
+    void OnMouseEnter()
     {
         if (turretGo == null && EventSystem.current.IsPointerOverGameObject() == false) {
 
