@@ -120,7 +120,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1748417878264880}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -24.481407, y: 1.447464, z: 41.611343}
+  m_LocalPosition: {x: -0.44759655, y: 1.4399996, z: 20.299782}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 224481596948544832}
@@ -184,6 +184,7 @@ MonoBehaviour:
   HP: 150
   explosionFab: {fileID: 1781451441608384, guid: 0448201d81709b34ea5c33d6512f52fb,
     type: 2}
+  slider: {fileID: 114500772245215876}
 --- !u!114 &114144847659544198
 MonoBehaviour:
   m_ObjectHideFlags: 1
