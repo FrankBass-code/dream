@@ -47,7 +47,7 @@ public class BuildManager : MonoBehaviour {
                     {
                         if (money >= selectedTurretData.cost)
                         {
-                            money -= selectedTurretData.cost;
+                            
                             mapCube.BuildTurret(selectedTurretData);
                             ChangeMoney(-selectedTurretData.cost);
                         }
@@ -125,6 +125,8 @@ public class BuildManager : MonoBehaviour {
 
 
     public void OnUpgradeDown() {
+
+
         selectedMapCube.UpgradeTurret();
         StartCoroutine(HideUpgradeUI());
     }

@@ -7,10 +7,10 @@ public class Enemy : MonoBehaviour {
     private Transform[] positions;
     public float speed = 10;
     private int index = 0;
-    public int HP = 150;
+    public float HP = 150;
     public GameObject explosionFab;
     public Slider slider;
-    private int totalHP;
+    private float totalHP;
 
     // Use this for initialization
     void Start() {
@@ -53,7 +53,7 @@ public class Enemy : MonoBehaviour {
 
     }
 
-    public void TakeDamage(int damage) {
+    public void TakeDamage(float damage) {
         if (HP <= 0) {
             return;
         }

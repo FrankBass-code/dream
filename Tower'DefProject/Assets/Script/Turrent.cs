@@ -72,7 +72,7 @@ public class Turrent : MonoBehaviour {
         }
     }
 
-    void UpdateEnemies() {
+    public void UpdateEnemies() {
 
         RemoveNull();
     }
