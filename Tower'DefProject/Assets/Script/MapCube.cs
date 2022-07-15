@@ -14,7 +14,7 @@ public class MapCube : MonoBehaviour {
 
     private Renderer renderer ;
 
-    private Turret turretData;
+    public Turret turretData;
 
     public void BuildTurret(Turret turretFab) {
         this.turretData = turretFab;

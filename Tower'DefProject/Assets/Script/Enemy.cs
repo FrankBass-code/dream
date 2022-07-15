@@ -41,9 +41,9 @@ public class Enemy : MonoBehaviour {
 
     void ReachDestination()
     {
-
+        GameManager.Instance.Failed();
         GameObject.Destroy(this.gameObject);
-        EnemySpawner.countEnemyAlive--;
+       
 
     }
 

@@ -24,6 +24,11 @@ public class EnemySpawner : MonoBehaviour {
             }
             yield return new WaitForSeconds(waveRate);
         }
+
+        while (countEnemyAlive > 0) {
+            yield return 0;
+        }
+        GameManager.Instance.Win(); 
     }
 
 
@@ -37,6 +42,8 @@ public class EnemySpawner : MonoBehaviour {
 	void Update () {
 		
 	}
-
+    public void Stop() {
+        StopCoroutine(SpawnEnemy());
+    }
 
 }
